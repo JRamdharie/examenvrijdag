@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdventureController!{% endblock %}
+
+{% block body %}
+    <h1 class="text-center">Welkom</h1>
+    <br>
+    <div class="text-center">
+        <br>
+        <br>
+        {% if app.user %}
+            <a class="btn btn-primary center" href="{{ path('app_logout') }}">logout</a>
+        {% else %}
+            <a class="btn btn-primary center" href="{{ path('app_register') }}">Register</a>
+        <a class="btn btn-primary center" href="{{ path('app_login') }}">Login</a>
+        {% endif %}
+    </div>
+{% endblock %}
